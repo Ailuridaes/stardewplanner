@@ -85,7 +85,7 @@ Building.prototype.drawHighlight = function drawHighlight() {
             stroke: (this.data.highlight.color || '#006600'),
             strokeWidth: 2,
             opacity: 0,
-            fill: (this.data.highlight.color || '#006600'),
+            fill: 'black',
             pointerEvents: 'none'
         });
     }
@@ -106,8 +106,8 @@ Building.prototype.moveHighlight = function moveHighlight(noFill) {
         var highlightY = this.sprite.attr('y') - (this.data.highlight.height / 2 - (this.data.height / 2));
         this.highlight.transform('T'+ highlightX +','+ highlightY);
         this.highlight.attr({
-            fill: (noFill ? 'none' : (this.data.highlight.color || '#006600')),
-            opacity: .5,
+            fill: (noFill ? 'none' : 'black'),
+            opacity: .4,
             "fill-opacity": .75
         });
     }
